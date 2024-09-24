@@ -42,6 +42,7 @@ export default function Home() {
           const { latitude, longitude } = position.coords;
           fetchWeatherData(latitude, longitude);
         },
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         (error) => {
           setLocationError('Failed to get your location');
         }
@@ -49,6 +50,7 @@ export default function Home() {
     } else {
       setLocationError('Geolocation is not supported by this browser');
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
